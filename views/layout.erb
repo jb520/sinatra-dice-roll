@@ -22,6 +22,7 @@
     <div><a href ="/dice/5/4">5d4</a></div>    
   </div>
 
+<% if @rolls%>
   <%= yield %>
 
   <ul>
@@ -31,6 +32,9 @@
     </li>
   <% end %>
   </ul>
+<% else %>
+  <%= yield %>
+<% end %>
 
 </body>
 </html>
